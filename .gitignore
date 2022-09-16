@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# typechain ABI typings
+typings/*
+!typings/index.d.ts
