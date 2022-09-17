@@ -7,13 +7,15 @@ import "./Pool.sol";
 contract Lens {
   address constant HUB = 0x7582177F9E536aB0b6c721e11f383C326F2Ad1D5;
   address constant COLLECT_MODULE = 0x0BE6bD7092ee83D44a6eC1D949626FeE48caB30c;
+  address constant PROFILE_CREATOR = 0x4fe8deB1cf6068060dE50aA584C3adf00fbDB87f;
+
 
   Pool pool;
 
   constructor(address _pool) {
     pool = Pool(_pool);
     //TODO create lens profile for the contract
-    //TODO set the lensInteractor address on the pool
+    pool.setLensInteractor(address(this));
   }
 
 

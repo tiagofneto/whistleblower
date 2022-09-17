@@ -38,7 +38,8 @@ contract Pool is Ownable {
     data;
   }
 
-  function setLensInteractor(address _lensInteractor) external onlyOwner {
+  function setLensInteractor(address _lensInteractor) external {
+    require(msg.sender == owner() || lensInteractor == address(0));
     lensInteractor = _lensInteractor;
   }
 }
