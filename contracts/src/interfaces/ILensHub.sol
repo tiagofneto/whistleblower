@@ -36,4 +36,6 @@ interface ILensHub {
    * @return uint256 An integer representing the post's publication ID.
    */
   function post(PostData calldata vars) external returns (uint256);
+
+  function tokenOfOwnerByIndex(address owner, uint256 index) external returns (uint256);
 }

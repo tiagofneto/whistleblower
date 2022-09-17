@@ -10,8 +10,9 @@ contract Lens {
   address constant COLLECT_MODULE = 0x0BE6bD7092ee83D44a6eC1D949626FeE48caB30c;
   address constant PROFILE_CREATOR = 0x4fe8deB1cf6068060dE50aA584C3adf00fbDB87f;
 
-
   Pool pool;
+
+  uint256 tokenId;
 
   constructor(address _pool) {
     //1. Set pool
@@ -33,6 +34,9 @@ contract Lens {
 
     //3. Set lens interactor on pool
     pool.setLensInteractor(address(this));
+
+    //4. Get lens token tokenId
+    tokenId = ILensHub(HUB).tokenOfOwnerByIndex(address(this), 0);
   }
 
 
@@ -42,8 +46,7 @@ contract Lens {
 
     //2. Post on lens
     ILensHub.PostData memory data = ILensHub.PostData({
-      //TODO get profile id from current contract profile
-      profileId: 0,
+      profileId: tokenId,
       contentURI: "Lorem ipsum",
       collectModule: COLLECT_MODULE,
       collectModuleInitData: "",
