@@ -1,0 +1,346 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "handle",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageURI",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "followModule",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "followModuleInitData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "string",
+              "name": "followNFTURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct MockProfileCreationProxy.CreateProfileData",
+          "name": "vars",
+          "type": "tuple"
+        }
+      ],
+      "name": "proxyCreateProfile",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "proxyCreateProfile((address,string,string,address,bytes,string))": "07e5f948"
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IMockProfileCreationProxy.sol",
+    "id": 44,
+    "exportedSymbols": {
+      "MockProfileCreationProxy": [
+        43
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:828:1",
+    "nodes": [
+      {
+        "id": 23,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:1",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 43,
+        "nodeType": "ContractDefinition",
+        "src": "65:801:1",
+        "nodes": [
+          {
+            "id": 36,
+            "nodeType": "StructDefinition",
+            "src": "623:169:1",
+            "canonicalName": "MockProfileCreationProxy.CreateProfileData",
+            "members": [
+              {
+                "constant": false,
+                "id": 25,
+                "mutability": "mutable",
+                "name": "to",
+                "nameLocation": "662:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "654:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 24,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "654:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 27,
+                "mutability": "mutable",
+                "name": "handle",
+                "nameLocation": "677:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "670:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "670:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 29,
+                "mutability": "mutable",
+                "name": "imageURI",
+                "nameLocation": "696:8:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "689:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 28,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "689:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 31,
+                "mutability": "mutable",
+                "name": "followModule",
+                "nameLocation": "718:12:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "710:20:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 30,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "710:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 33,
+                "mutability": "mutable",
+                "name": "followModuleInitData",
+                "nameLocation": "742:20:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "736:26:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 32,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "736:5:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 35,
+                "mutability": "mutable",
+                "name": "followNFTURI",
+                "nameLocation": "775:12:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 36,
+                "src": "768:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 34,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "768:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateProfileData",
+            "nameLocation": "630:17:1",
+            "scope": 43,
+            "visibility": "public"
+          },
+          {
+            "id": 42,
+            "nodeType": "FunctionDefinition",
+            "src": "796:68:1",
+            "functionSelector": "07e5f948",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proxyCreateProfile",
+            "nameLocation": "805:18:1",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39,
+                  "mutability": "mutable",
+                  "name": "vars",
+                  "nameLocation": "849:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42,
+                  "src": "824:29:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CreateProfileData_$36_memory_ptr",
+                    "typeString": "struct MockProfileCreationProxy.CreateProfileData"
+                  },
+                  "typeName": {
+                    "id": 38,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37,
+                      "name": "CreateProfileData",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36,
+                      "src": "824:17:1"
+                    },
+                    "referencedDeclaration": 36,
+                    "src": "824:17:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CreateProfileData_$36_storage_ptr",
+                      "typeString": "struct MockProfileCreationProxy.CreateProfileData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:31:1"
+            },
+            "returnParameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "863:0:1"
+            },
+            "scope": 43,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "MockProfileCreationProxy",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          43
+        ],
+        "name": "MockProfileCreationProxy",
+        "nameLocation": "75:24:1",
+        "scope": 44,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 1
+}

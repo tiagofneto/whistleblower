@@ -1,10 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-contract Pool {
+import "openzeppelin-contracts/access/Ownable.sol";
+
+contract Pool is Ownable {
   uint256 immutable depositAmount;
 
   mapping(bytes32 => bool) private hashes;
+
+  address lensInteractor;
 
   constructor(uint256 _depostiAmount) {
     depositAmount = _depostiAmount;
@@ -18,10 +22,16 @@ contract Pool {
   }
 
   function verifyAndRemoveWord(string memory word) external {  
+    require(msg.sender == lensInteractor, "No permission");
+
     bytes32 hash = keccak256(abi.encodePacked(word));
     require(hashes[hash], "Word hash not found");
 
     hashes[hash] = false;
+  }
+
+  function setLensInteractor(address _lensInteractor) external onlyOwner {
+    lensInteractor = _lensInteractor;
   }
 }
 
