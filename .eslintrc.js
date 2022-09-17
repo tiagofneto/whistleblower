@@ -7,6 +7,7 @@ module.exports = {
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   rules: {
+    '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/member-delimiter-style': ['error', { 'multiline': { 'delimiter': 'none' } }],
     '@typescript-eslint/semi': ['error', 'never'],
     'comma-dangle': ['error', 'always-multiline'],

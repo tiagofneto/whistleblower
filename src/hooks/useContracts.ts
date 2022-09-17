@@ -23,7 +23,7 @@ import { metaMaskHooks } from 'src/web3/connectors/metaMask'
 export function useContracts(): {
   contracts: ContractInstances
   addresses: ContractAddresses
-} {
+  } {
 
   const provider = metaMaskHooks.useProvider()!
 
@@ -49,7 +49,7 @@ export function useContracts(): {
 
     return { contracts, addresses }
   },
-    [provider]
+  [provider]
   )
 }
 

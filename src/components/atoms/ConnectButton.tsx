@@ -37,8 +37,9 @@ export function ConnectButton({
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       {
+        /* eslint-disable indent */
         /* ERROR         */ error ? <button style={{ cursor: 'pointer' }} onClick={connect}>Try Again?</button>
-                            // @ts-expect-error Property connector.actions is protected...
+        //                  @ts-expect-error Property connector.actions is protected...
         /* DISCONNECT  */ : isActive ? <button style={{ cursor: 'pointer' }} onClick={() => (connector?.deactivate ?? connector.actions.resetState)()}>Disconnect</button>
         /* ACTIVATING  */ : isActivating ? <button disabled>Activating ⏳</button>
         /* INTERACTING */ : interacting ? <button disabled>Prompted ⏳</button>

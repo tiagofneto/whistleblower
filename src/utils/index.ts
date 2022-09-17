@@ -28,6 +28,6 @@ export const is = <TargetType>() => <T extends TargetType>(arg: T): T => arg
  *    // `something` is of type B
  * }
  */
-export const narrow = <T extends any>(value: any, condition: (v: T) => boolean): value is T => condition(value)
+export const narrow = <T>(value: any, condition: (v: T) => boolean): value is T => condition(value)
 
 export const isNullish = (v: any): v is null | undefined => v === undefined || v === null

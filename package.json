@@ -14,7 +14,7 @@
     "start": "next start",
     "lint": "next lint",
     "typechain:compile": "typechain --target=ethers-v5 --out-dir typings 'abi/*.json'",
-    "lint:fix": "eslint --fix .",
+    "lint:fix": "eslint --fix src pages",
     "types": "tsc --noEmit --incremental",
     "types:watch": "npm run types -- -watch"
   },
@@ -32,6 +32,7 @@
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "typechain": "^8.1.0",

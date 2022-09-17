@@ -11,13 +11,13 @@ export default function useShallowState<S = AnyObject>(
     setState: typeof setState,
     utilityFunctions: {
       /** Sets all properties to `undefined`. */
-      clearState: () => void,
+      clearState: () => void
       /** Clears property value by setting it to `undefined`. */
-      clearProperty: (property: keyof S) => void,
+      clearProperty: (property: keyof S) => void
       /** Sets all properties to the `initialState`. */
-      resetState: () => void,
+      resetState: () => void
       /** Sets property value to its `initialState`. */
-      resetProperty: (property: keyof S) => void,
+      resetProperty: (property: keyof S) => void
     },
     /** Escape hatch to make life easier ¯\_(ツ)_/¯ */
     refState: { current: S },
