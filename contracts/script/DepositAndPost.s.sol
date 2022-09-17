@@ -12,11 +12,11 @@ contract DepositAndPostScript is Script {
   
       // Script is deploying new contracts everytime for the sake of testing
       Pool pool = new Pool(10**16);
-      Lens lens = new Lens(address(pool), "testhandle");
+      Lens lens = new Lens(address(pool), "testhandlee");
 
-      pool.deposit{value: 10**16}(keccak256(abi.encodePacked("https://arweave.net/yjJB06jDjnuZFFMk2Rc77kSZEQE1Sa-1Ei78a08KQEs")));
+      pool.deposit{value: 10**16}(keccak256(abi.encodePacked("ipfs://QmY5QFHBSoQRhVzbjNST7fPcQS9RRjL7CCVoywcDJCKakE")));
 
-      lens.verifyAndPost("https://arweave.net/yjJB06jDjnuZFFMk2Rc77kSZEQE1Sa-1Ei78a08KQEs");
+      lens.verifyAndPost("ipfs://QmY5QFHBSoQRhVzbjNST7fPcQS9RRjL7CCVoywcDJCKakE");
 
       vm.stopBroadcast();
     }
