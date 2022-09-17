@@ -30,6 +30,14 @@ contract Pool is Ownable {
     hashes[hash] = false;
   }
 
+  function rewardRelayer(address relayer) external {
+    require(msg.sender == lensInteractor, "No permission");
+
+    (bool sent, bytes memory data) = relayer.call{value: depositAmount}("");
+    require(sent, "Failed to send Ether");
+    data;
+  }
+
   function setLensInteractor(address _lensInteractor) external onlyOwner {
     lensInteractor = _lensInteractor;
   }
