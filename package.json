@@ -19,6 +19,9 @@
     "types:watch": "npm run types -- -watch"
   },
   "dependencies": {
+    "@web3-react/core": "^8.0.35-beta.0",
+    "@web3-react/metamask": "^8.0.28-beta.0",
+    "@web3-react/types": "^8.0.20-beta.0",
     "ethers": "^5.7.1",
     "next": "12.3.0",
     "react": "18.2.0",
