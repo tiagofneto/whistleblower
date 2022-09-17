@@ -9,13 +9,14 @@ import "../src/Lens.sol";
 contract DepositAndPostScript is Script {
     function run() public {
       vm.startBroadcast();
+  
+      // Script is deploying new contracts everytime for the sake of testing
+      Pool pool = new Pool(10**16);
+      Lens lens = new Lens(address(pool), "testhandle");
 
-      Pool pool = Pool(0xB708a2cbDEC4a140Ae815d0577434a80A21f0652);
-      Lens lens = Lens(0x3BC9901355935eC273953a1f30Bc08Ecd06e1941);
+      pool.deposit{value: 10**16}(keccak256(abi.encodePacked("https://arweave.net/yjJB06jDjnuZFFMk2Rc77kSZEQE1Sa-1Ei78a08KQEs")));
 
-      pool.deposit{value: 10**16}(keccak256(abi.encodePacked("hello")));
-
-      lens.verifyAndPost("hello");
+      lens.verifyAndPost("https://arweave.net/yjJB06jDjnuZFFMk2Rc77kSZEQE1Sa-1Ei78a08KQEs");
 
       vm.stopBroadcast();
     }

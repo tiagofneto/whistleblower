@@ -6,15 +6,15 @@ import "./interfaces/IMockProfileCreationProxy.sol";
 import "./Pool.sol";
 
 contract Lens {
-  address constant HUB = 0x7582177F9E536aB0b6c721e11f383C326F2Ad1D5;
+  address constant HUB = 0x60Ae865ee4C725cd04353b5AAb364553f56ceF82;
   address constant COLLECT_MODULE = 0x0BE6bD7092ee83D44a6eC1D949626FeE48caB30c;
-  address constant PROFILE_CREATOR = 0x4fe8deB1cf6068060dE50aA584C3adf00fbDB87f;
+  address constant PROFILE_CREATOR = 0x420f0257D43145bb002E69B14FF2Eb9630Fc4736;
 
   Pool pool;
 
   uint256 tokenId;
 
-  constructor(address _pool) {
+  constructor(address _pool, string memory handle) {
     //1. Set pool
     pool = Pool(_pool);
 
@@ -23,7 +23,7 @@ contract Lens {
 
     IMockProfileCreationProxy.CreateProfileData memory vars = IMockProfileCreationProxy.CreateProfileData({
       to: address(this),
-      handle: "testloremipsumtest",
+      handle: handle,
       imageURI: "",
       followModule: address(0),
       followModuleInitData: "",
@@ -47,9 +47,9 @@ contract Lens {
     //2. Post on lens
     ILensHub.PostData memory data = ILensHub.PostData({
       profileId: tokenId,
-      contentURI: "Lorem ipsum",
+      contentURI: word,
       collectModule: COLLECT_MODULE,
-      collectModuleInitData: "",
+      collectModuleInitData: abi.encode(false),
       referenceModule: address(0),
       referenceModuleInitData: ""
     });

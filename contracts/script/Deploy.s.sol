@@ -12,7 +12,7 @@ contract DeployScript is Script {
 
       Pool pool = new Pool(10**16);
     
-      Lens lens = new Lens(address(pool));
+      Lens lens = new Lens(address(pool), "testhandle");
       lens;
 
       vm.stopBroadcast();
