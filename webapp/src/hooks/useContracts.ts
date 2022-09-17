@@ -23,7 +23,7 @@ import { metaMaskHooks } from 'src/web3/connectors/metaMask'
 export function useContracts(): {
   contracts: ContractInstances
   addresses: ContractAddresses
-  } {
+} {
 
   const provider = metaMaskHooks.useProvider()!
 
@@ -43,20 +43,20 @@ export function useContracts(): {
         const name = prop.replace(/./, x => x.toUpperCase()) as ContractNames
         if (factories[`${name}__factory`] === undefined) throw `ABI is missing for contracts.${name}. Did you mean to use addresses.${name} instead?`
 
-        return cache[prop] = factories[`${name}__factory`].connect(addresses[prop], provider?.getSigner())
+        return (cache[prop] as any) = factories[`${name}__factory`].connect(addresses[prop], provider?.getSigner())
       },
     }) as ContractInstances
 
     return { contracts, addresses }
   },
-  [provider]
+    [provider]
   )
 }
 
 type ContractAddressesKeys = keyof typeof contractAddresses
 type ContractNames = keyof typeof factories extends `${infer A}__factory` ? A : never
 type ContractInstances = {
-  // @ts-expect-error This gives error when some of abi/* or contractAddresses/* is missing. e.g. 'mockETH'.
+  // @__ts-expect-error This gives error when some of abi/* or contractAddresses/* is missing. e.g. 'mockETH'.
   [contract in ContractAddressesKeys]: ReturnType<typeof factories[`${Capitalize<contract>}__factory`]['connect']>
 }
 type ContractAddresses = {
