@@ -1,0 +1,346 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "handle",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "imageURI",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "followModule",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "followModuleInitData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "string",
+              "name": "followNFTURI",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IMockProfileCreationProxy.CreateProfileData",
+          "name": "vars",
+          "type": "tuple"
+        }
+      ],
+      "name": "proxyCreateProfile",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "proxyCreateProfile((address,string,string,address,bytes,string))": "07e5f948"
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IMockProfileCreationProxy.sol",
+    "id": 445,
+    "exportedSymbols": {
+      "IMockProfileCreationProxy": [
+        444
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:829:5",
+    "nodes": [
+      {
+        "id": 424,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:5",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 444,
+        "nodeType": "ContractDefinition",
+        "src": "65:802:5",
+        "nodes": [
+          {
+            "id": 437,
+            "nodeType": "StructDefinition",
+            "src": "624:169:5",
+            "canonicalName": "IMockProfileCreationProxy.CreateProfileData",
+            "members": [
+              {
+                "constant": false,
+                "id": 426,
+                "mutability": "mutable",
+                "name": "to",
+                "nameLocation": "663:2:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "655:10:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 425,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 428,
+                "mutability": "mutable",
+                "name": "handle",
+                "nameLocation": "678:6:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "671:13:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 427,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "671:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 430,
+                "mutability": "mutable",
+                "name": "imageURI",
+                "nameLocation": "697:8:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "690:15:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 429,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "690:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 432,
+                "mutability": "mutable",
+                "name": "followModule",
+                "nameLocation": "719:12:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "711:20:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 431,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "711:7:5",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 434,
+                "mutability": "mutable",
+                "name": "followModuleInitData",
+                "nameLocation": "743:20:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "737:26:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 433,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "737:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 436,
+                "mutability": "mutable",
+                "name": "followNFTURI",
+                "nameLocation": "776:12:5",
+                "nodeType": "VariableDeclaration",
+                "scope": 437,
+                "src": "769:19:5",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 435,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "769:6:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CreateProfileData",
+            "nameLocation": "631:17:5",
+            "scope": 444,
+            "visibility": "public"
+          },
+          {
+            "id": 443,
+            "nodeType": "FunctionDefinition",
+            "src": "797:68:5",
+            "functionSelector": "07e5f948",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proxyCreateProfile",
+            "nameLocation": "806:18:5",
+            "parameters": {
+              "id": 441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 440,
+                  "mutability": "mutable",
+                  "name": "vars",
+                  "nameLocation": "850:4:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 443,
+                  "src": "825:29:5",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_CreateProfileData_$437_memory_ptr",
+                    "typeString": "struct IMockProfileCreationProxy.CreateProfileData"
+                  },
+                  "typeName": {
+                    "id": 439,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 438,
+                      "name": "CreateProfileData",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 437,
+                      "src": "825:17:5"
+                    },
+                    "referencedDeclaration": 437,
+                    "src": "825:17:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CreateProfileData_$437_storage_ptr",
+                      "typeString": "struct IMockProfileCreationProxy.CreateProfileData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "824:31:5"
+            },
+            "returnParameters": {
+              "id": 442,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "864:0:5"
+            },
+            "scope": 444,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMockProfileCreationProxy",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          444
+        ],
+        "name": "IMockProfileCreationProxy",
+        "nameLocation": "75:25:5",
+        "scope": 445,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 5
+}

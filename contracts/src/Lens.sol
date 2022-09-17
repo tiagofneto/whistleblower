@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "./interfaces/ILensHub.sol";
+import "./interfaces/IMockProfileCreationProxy.sol";
 import "./Pool.sol";
 
 contract Lens {
@@ -13,8 +14,24 @@ contract Lens {
   Pool pool;
 
   constructor(address _pool) {
+    //1. Set pool
     pool = Pool(_pool);
-    //TODO create lens profile for the contract
+
+    //2. Create lens profile
+    IMockProfileCreationProxy profileCreator = IMockProfileCreationProxy(PROFILE_CREATOR);
+
+    IMockProfileCreationProxy.CreateProfileData memory vars = IMockProfileCreationProxy.CreateProfileData({
+      to: address(this),
+      handle: "testloremipsumtest",
+      imageURI: "",
+      followModule: address(0),
+      followModuleInitData: "",
+      followNFTURI: ""
+    });
+
+    profileCreator.proxyCreateProfile(vars);
+
+    //3. Set lens interactor on pool
     pool.setLensInteractor(address(this));
   }
 
