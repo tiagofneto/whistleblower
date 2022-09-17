@@ -1,0 +1,54 @@
+.box {
+  background: #ABF806;
+  border-radius: 16px;
+
+  padding: 20px;
+
+  font-style: normal;
+  font-weight: 410;
+  font-size: 24px;
+  line-height: 27px;
+
+  color: #000000;
+}
+
+.boxAnnotation {
+  box-sizing: border-box;
+
+  background: #5B8306;
+  border: 6px solid #000000;
+  border-radius: 14px;
+  padding: 12px;
+
+  font-style: normal;
+  font-weight: 410;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.small {
+  width: 168px;
+  height: 34px;
+}
+
+.large {
+  width: 230px;
+  height: 47px;
+
+  font-style: normal;
+  font-weight: 410;
+  font-size: 26px;
+  line-height: 29px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}

@@ -5,7 +5,7 @@ import { metaMaskHooks } from 'src/web3/connectors/metaMask'
 import styles from '/styles/Home.module.css'
 
 
-const ReadBlockchainExample: React.FC = () => {
+export const ReadBlockchainExample: React.FC = () => {
   const contracts = useContracts()
   const account = metaMaskHooks.useAccount()!
 
