@@ -46,31 +46,40 @@ const Home: NextPage = () => {
   const isUsingIPFSInput = !!form.ipfsLink.length
 
   const submit = useCallback(async () => {
-    setState({ isSubmitting: true })
-    let ipfsLink
-    if (isUsingIPFSInput) {
-      ipfsLink = form.ipfsLink
-    } else {
-      const ipfsHash = await uploadToPinata(refform.current)
-      ipfsLink = `ipfs://${ipfsHash}`
-      console.debug('{ipfsHash, ipfsLink}', { ipfsHash, ipfsLink })
-    }
-    console.debug('ipfsLink', ipfsLink)
-    setState({ ipfsLink })
+    try {
+      setState({ isSubmitting: true })
+      let ipfsLink
+      if (isUsingIPFSInput) {
+        ipfsLink = form.ipfsLink
+      } else {
+        const ipfsHash = await uploadToPinata(refform.current)
+        ipfsLink = `ipfs://${ipfsHash}`
+      }
+      setState({ ipfsLink })
 
-    await submitIPFSLinkToRelayers(ipfsLink, contracts)
-    setState({
-      isSubmitting: false,
-      isSubmitted: true,
-    })
+      await submitIPFSLinkToRelayers(ipfsLink, contracts)
+      setState({
+        isSubmitting: false,
+        isSubmitted: true,
+      })
+    } catch (e) {
+      console.debug('e', e)
+      resetState()
+    }
   }, [setState, isUsingIPFSInput, form.ipfsLink, refform, contracts])
 
   const submitToBlockchainAsRelayer = useCallback(async () => {
-    setState({ isPublishing: true })
-    const ipfsLink = refState.current.ipfsLink
-    await (await contracts.Lens.functions.verifyAndPost(ipfsLink)).wait()
-    resetState()
-    setState({ isPublished: true })
+    try {
+      setState({ isPublishing: true })
+      const ipfsLink = refState.current.ipfsLink
+      await (await contracts.Lens.functions.verifyAndPost(ipfsLink)).wait()
+      resetState()
+      resetForm()
+      setState({ isPublished: true })
+    } catch (e) {
+      console.debug('e', e)
+      resetState()
+    }
   }
     , [contracts, refState, resetState, setState]
   )
