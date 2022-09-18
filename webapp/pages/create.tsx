@@ -33,7 +33,7 @@ const Home: NextPage = () => {
     isPublished: false,
   })
 
-  const [form, setForm, { resetState: resetForm }] = useShallowState({
+  const [form, setForm, { resetState: resetForm }, refform] = useShallowState({
     text: '',
     ipfsLink: '',
     tag1: '',
@@ -47,9 +47,14 @@ const Home: NextPage = () => {
 
   const submit = useCallback(async () => {
     setState({ isSubmitting: true })
-    const ipfsLink = isUsingIPFSInput
-      ? `ipfs://${await uploadToPinata(form)}`
-      : form.ipfsLink
+    let ipfsLink
+    if (isUsingIPFSInput) {
+      ipfsLink = form.ipfsLink
+    } else {
+      const ipfsHash = await uploadToPinata(refform.current)
+      ipfsLink = `ipfs://${ipfsHash}`
+      console.debug('{ipfsHash, ipfsLink}', { ipfsHash, ipfsLink })
+    }
     console.debug('ipfsLink', ipfsLink)
     setState({ ipfsLink })
 
@@ -58,7 +63,7 @@ const Home: NextPage = () => {
       isSubmitting: false,
       isSubmitted: true,
     })
-  }, [contracts, form, isUsingIPFSInput, setState])
+  }, [setState, isUsingIPFSInput, form.ipfsLink, refform, contracts])
 
   const submitToBlockchainAsRelayer = useCallback(async () => {
     setState({ isPublishing: true })
@@ -86,10 +91,10 @@ const Home: NextPage = () => {
         <main className={styles.main}>
 
           <H3>tell us something</H3>
-          <TextArea value={form.text} onChange={handleMessageChange} /* disabled={isUsingIPFSInput || state.isSubmitted || state.isSubmitting} */ />
+          <TextArea value={form.text} onChange={handleMessageChange} disabled={isUsingIPFSInput || state.isSubmitted || state.isSubmitting} />
 
           <H3>or provide ipfs link instead</H3>
-          <Input value={form.ipfsLink} onChange={handleIpfsChange} /* disabled={state.isSubmitted || state.isSubmitting} */ />
+          <Input value={form.ipfsLink} onChange={handleIpfsChange} disabled={state.isSubmitted || state.isSubmitting} />
 
           <H3>tags</H3>
           <div style={{ display: 'flex' }}>
@@ -129,8 +134,7 @@ const uploadToPinata = async (form: FormState) =>
   }).then<PinataPinResponse>(r => r.json())
     .then(r => r.IpfsHash)
 
-const submitIPFSLinkToRelayers = async (ipfsHash: string, contractsHook: ContractInstances) => {
-  const ipfsLink = `ipfs://${ipfsHash}`
+const submitIPFSLinkToRelayers = async (ipfsLink: string, contractsHook: ContractInstances) => {
   const ipfsLinkHash = keccak256(toUtf8Bytes(ipfsLink))
   const fee = ethers.BigNumber.from('10').pow(16)
   console.debug('submit to relayers', {
