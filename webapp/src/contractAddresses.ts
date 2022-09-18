@@ -6,10 +6,10 @@ const contracts = {
     address: '0x01BE23585060835E02B77ef475b0Cc51aA1e0709',
   },
   Pool: {
-    address: '0x7F58eA4D1Bd9CAa3b61F2c23AEADfcF87bBbb615',
+    address: '0x165292f2B875179a20187E434Ceed6b3c0dF1336',
   },
   Lens: {
-    address: '0xD0baab91E5A1E627E34a05fD1212b722dD1E1165',
+    address: '0x5f441dA67173a7f5D2A5d2C6788C60423D135dF6',
   },
 }
 
