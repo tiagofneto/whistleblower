@@ -2,6 +2,10 @@ import { MutableRefObject, useMemo, useReducer, useRef } from 'react'
 
 /**
  * @author Qwerty <qwerty@qwerty.xyz>
+ *
+ * @example
+ *
+ * const [state, setState, { clearState, clearProperty, resetState, resetProperty }, refState] = useState(initialState)
  */
 
 export default function useShallowState<S = AnyObject>(

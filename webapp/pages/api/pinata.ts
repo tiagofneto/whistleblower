@@ -1,5 +1,7 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import pinataSDK from '@pinata/sdk'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { PINATA_KEY, PINATA_SECRET } from 'src/constants'
+import { v4 as uuidv4 } from 'uuid'
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,15 +11,10 @@ export default async function handler(
   res.status(200).json(response)
 }
 
-
-import pinataSDK from '@pinata/sdk'
-import { PINATA_KEY, PINATA_SECRET } from 'src/constants'
-import { v4 as uuidv4 } from 'uuid'
-
 const pinata = pinataSDK(PINATA_KEY, PINATA_SECRET)
 
 export async function uploadText(content: string) {
-  const obj = {
+  const payload = {
     version: '2.0.0',
     metadata_id: uuidv4(),
     description: 'Anonymous post on lens',
@@ -30,13 +27,11 @@ export async function uploadText(content: string) {
   }
 
   return pinata
-    .pinJSONToIPFS(obj, {})
+    .pinJSONToIPFS(payload, {})
     .then((result) => {
-      //handle results here
       console.log(result)
       return result
     }).catch((err) => {
-      //handle error here
       console.log(err)
     })
 }

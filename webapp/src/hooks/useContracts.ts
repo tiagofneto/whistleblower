@@ -55,10 +55,10 @@ export function useContracts(): {
 
 type ContractAddressesKeys = keyof typeof contractAddresses
 type ContractNames = keyof typeof factories extends `${infer A}__factory` ? A : never
-type ContractInstances = {
+export type ContractInstances = {
   // @__ts-expect-error This gives error when some of abi/* or contractAddresses/* is missing. e.g. 'mockETH'.
   [contract in ContractAddressesKeys]: ReturnType<typeof factories[`${Capitalize<contract>}__factory`]['connect']>
 }
-type ContractAddresses = {
+export type ContractAddresses = {
   [contract in ContractAddressesKeys]: string
 }
