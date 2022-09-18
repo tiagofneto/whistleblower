@@ -49,8 +49,14 @@ button:focus, textarea:focus, input:focus {
 
 .actionButton.disabled, button:disabled, textarea:disabled, input:disabled {
   background: hwb(79 2% 30%);
+  cursor: unset;
 }
 
 .actionButton.disabled {
   background: hwb(79 2% 30%) !important;
+  cursor: unset;
+}
+
+.actionButton.disabled button {
+  cursor: unset;
 }
