@@ -7,8 +7,6 @@
   border-radius: 6.6px;
 
   color: #000000;
-  font-style: normal;
-  font-weight: 410;
   font-size: 40px;
   line-height: 44px;
   display: flex;
@@ -18,22 +16,22 @@
 }
 
 .squareBorderedButton {
-  width: 234px;
-  height: 50px;
-  margin: 10px 6px;
+  width: 168px;
+  min-height: 34px;
+  margin: 6px;
 
-  background: #ABF806;
-  border-radius: 6.6px;
+  background: #000000;
+  border: 4px solid #ABF806;
+  border-radius: 12px;
 
-  color: #000000;
-  font-style: normal;
-  font-weight: 410;
-  font-size: 40px;
-  line-height: 44px;
+  word-break: break-all;
+  font-size: 20px;
+  line-height: 22px;
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
+
+  color: #ABF806;
 }
 
 .roundButton {

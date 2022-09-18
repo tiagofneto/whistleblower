@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
-import { Box, H2, H3, Message, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareButton } from 'src/components'
-import BoxAnnotation from 'src/components/atoms/BoxAnnotation'
+import {
+  Article, Box, BoxAnnotation, H2, H3, ButtonInput, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareBorderedButton, SquareButton, ActionButton, TagInput, TextArea,
+} from 'src/components'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -34,6 +35,9 @@ const Home: NextPage = () => {
           <RoundButton>#ipsum</RoundButton>
         </div>
 
+        <SquareBorderedButton>#corruption</SquareBorderedButton>
+        <SquareBorderedButton>#money_loundering</SquareBorderedButton>
+
         <hr />{/* ------------------------------------------------------------------------------------------------------- */}
 
         <H2>Text elements</H2>
@@ -49,8 +53,27 @@ const Home: NextPage = () => {
         <BoxAnnotation size='small'>01.13.37</BoxAnnotation>
         <BoxAnnotation size='large'>anonymous</BoxAnnotation>
         <BoxAnnotation size='large'>0x123..45</BoxAnnotation>
+        <SquareBorderedButton>#corruption</SquareBorderedButton>
+        <SquareBorderedButton>#money_loundering</SquareBorderedButton>
 
-        <Message />
+        <H3>Article</H3>
+
+        <Article />
+
+        <hr />{/* ------------------------------------------------------------------------------------------------------- */}
+
+        <H2>Create message</H2>
+
+        <ButtonInput />
+        <ActionButton text='whistleblow' />
+        <ActionButton />
+
+        <div style={{ display: 'flex' }}>
+          <TagInput value='qwerty' />
+          <TagInput />
+        </div>
+
+        <TextArea />
 
       </main>
     </div>

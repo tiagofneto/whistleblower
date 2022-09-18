@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { metaMaskHooks, metaMaskConnector } from 'src/web3/connectors/metaMask'
-import { Card } from 'src/components/molecules'
+import { ConnectorCard } from 'src/components/molecules'
 import useToggle from 'src/hooks/useToggle'
 
 const { useChainId, useAccounts, useIsActivating, useIsActive, useProvider, useENSNames } = metaMaskHooks
@@ -26,7 +26,7 @@ export default function MetaMaskCard() {
   }, [])
 
   return (
-    <Card
+    <ConnectorCard
       connector={metaMaskConnector}
       chainId={chainId}
       isActivating={isActivating}

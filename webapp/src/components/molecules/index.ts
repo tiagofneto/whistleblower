@@ -1,2 +1,2 @@
-export { Card } from './Card'
-export { Message } from './Message'
+export { ConnectorCard } from './ConnectorCard'
+export { Article } from './Article'

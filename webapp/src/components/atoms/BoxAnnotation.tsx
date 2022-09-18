@@ -6,7 +6,7 @@ interface BoxAnnotationProps {
 }
 
 export const BoxAnnotation: React.FC<PropsWithChildren<BoxAnnotationProps>> = ({ size, children }) => (
-  <div className={[styles.boxAnnotation, styles[size]].join(' ')}>
+  <div className={[styles.boxAnnotation, styles[size], 'boxAnnotation', size].join(' ')}>
     {children}
   </div>
 )

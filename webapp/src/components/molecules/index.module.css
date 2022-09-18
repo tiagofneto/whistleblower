@@ -1,11 +1,32 @@
-.message {
-  font-style: normal;
-  font-weight: 410;
-  font-size: 26px;
-  line-height: 29px;
+.article {
+  position: relative;
+  width: 870px;
+
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
 
   color: #000000;
+}
+
+
+.article :global(.box) {
+  padding: 58px 20px 20px 20px;
+}
+
+.article :global(.boxAnnotation.large) {
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+.article :global(.boxAnnotation.small) {
+  position: absolute;
+  bottom: -18px;
+  right: -20px;
+}
+
+
+.article :global(.squareBorderedButton) {
+  margin-top: 0px;
 }

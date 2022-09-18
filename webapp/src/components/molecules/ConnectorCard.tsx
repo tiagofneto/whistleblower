@@ -18,7 +18,7 @@ interface Props {
   accounts?: string[]
 }
 
-export function Card({
+export function ConnectorCard({
   connector,
   chainId,
   isActivating,

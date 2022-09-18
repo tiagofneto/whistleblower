@@ -2,9 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: lores-9-plus-wide, sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 hr {
@@ -18,7 +15,22 @@ a {
 }
 
 * {
+  font-family: lores-9-plus-wide, sans-serif;
   box-sizing: border-box;
+  font-style: normal;
+  font-weight: 410;
+}
+
+.anchor {
+  position: relative;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,4 +41,8 @@ a {
     color: white;
     background: black;
   }
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
