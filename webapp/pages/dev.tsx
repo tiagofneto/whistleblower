@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { ActionButton, Box, BoxAnnotation, ButtonInput, H2, H3, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareBorderedButton, SquareButton, TagInput, TextArea } from 'src/components'
+import { ActionButton, Box, BoxAnnotation, ButtonInput, H2, H3, Input, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareBorderedButton, SquareButton, TagInput, TextArea } from 'src/components'
 import Article from 'src/components/molecules/Article'
 import styles from '../styles/Home.module.css'
 
@@ -64,6 +64,7 @@ const Home: NextPage = () => {
         <H2>Create message</H2>
 
         <ButtonInput />
+        <Input />
         <ActionButton text='whistleblow' />
         <ActionButton />
 

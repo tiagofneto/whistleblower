@@ -97,7 +97,7 @@ export default Home
 const uploadToPinata = async (body: string) =>
   fetch('/api/pinata', {
     method: 'POST',
-    body,
+    body: JSON.stringify({ text: body }),
   }).then<PinataPinResponse>(r => r.json())
     .then(r => r.IpfsHash)
 

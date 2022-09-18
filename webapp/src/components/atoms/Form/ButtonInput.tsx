@@ -8,10 +8,10 @@ interface InputProps {
   [key: string]: any
 }
 
-export const ButtonInput: React.FC<InputProps> = ({ value, onChange, onClick, ...rest }) => (
+export const ButtonInput: React.FC<InputProps> = ({ value = '', onChange, onClick, ...rest }) => (
   <div className={styles.buttonInput}>
-    <input className={styles.buttonInputInput} value={value} onChange={ev => onChange?.(ev.currentTarget.value)} {...rest} />
-    <button className={styles.buttonInputButton} onClick={() => onClick?.()} >Pay</button>
+    <input className={styles.buttonInputInput} value={`${value} ETH`} onChange={ev => onChange?.(ev.currentTarget.value)} {...rest} />
+    <button className={styles.buttonInputButton} onClick={() => onClick?.()} >cost</button>
   </div>
 )
 

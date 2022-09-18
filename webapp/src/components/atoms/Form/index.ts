@@ -1,4 +1,5 @@
 export { ActionButton } from './ActionButton'
 export { ButtonInput } from './ButtonInput'
+export { Input } from './Input'
 export { TagInput } from './TagInput'
 export { TextArea } from './TextArea'

@@ -7,8 +7,8 @@ interface InputProps {
   [key: string]: any
 }
 
-export const TagInput: React.FC<InputProps> = ({ value, onChange, ...rest }) => (
-  <input className={styles.tagInput} value={value ? `#${value}` : undefined} onChange={ev => onChange?.(ev.currentTarget.value.slice(1))} size={4} {...rest} />
+export const TagInput: React.FC<InputProps> = ({ value = '', onChange, ...rest }) => (
+  <input className={styles.tagInput} value={`#${value}`} onChange={ev => onChange?.(ev.currentTarget.value.slice(1))} size={4} {...rest} />
 )
 
 export default TagInput

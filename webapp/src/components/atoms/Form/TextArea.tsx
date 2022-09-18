@@ -8,9 +8,7 @@ interface TextAreaProps {
 }
 
 export const TextArea: React.FC<TextAreaProps> = ({ value, onChange, ...rest }) => (
-  <textarea className={styles.textarea} onChange={ev => onChange?.(ev.currentTarget.value)} {...rest}>
-    {value}
-  </textarea>
+  <textarea className={styles.textarea} value={value} onChange={ev => onChange?.(ev.currentTarget.value)} {...rest} />
 )
 
 export default TextArea
