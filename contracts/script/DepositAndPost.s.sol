@@ -12,7 +12,7 @@ contract DepositAndPostScript is Script {
   
       // Script is deploying new contracts everytime for the sake of testing
       Pool pool = new Pool(10**16);
-      Lens lens = new Lens(address(pool), "testhandlee");
+      Lens lens = new Lens(address(pool), "whistleblower");
 
       pool.deposit{value: 10**16}(keccak256(abi.encodePacked("ipfs://QmY5QFHBSoQRhVzbjNST7fPcQS9RRjL7CCVoywcDJCKakE")));
 
