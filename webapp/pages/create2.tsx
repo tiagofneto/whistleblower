@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
-import { useCallback, useState } from 'react'
+import { ChangeEvent, useCallback, useState } from 'react'
+import MetaMaskCard from 'src/components/organisms/MetaMaskCard'
 import { ContractInstances, useContracts } from 'src/hooks/useContracts'
-import styles from '../styles/Create.module.css'
+import styles from '../styles/Home.module.css'
 
-import { PinataPinResponse } from '@pinata/sdk'
-import { ethers } from 'ethers'
 import { keccak256, toUtf8Bytes } from 'ethers/lib/utils'
-import { ActionButton, ButtonInput, H3, TagInput, TextArea } from 'src/components'
+import { ethers } from 'ethers'
+import { H2, H3 } from 'src/components'
+import { PinataPinResponse } from '@pinata/sdk'
 import useShallowState from 'src/hooks/useShallowState'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   const { contracts } = useContracts()
@@ -54,42 +54,40 @@ const Home: NextPage = () => {
     , [contracts, refState, resetState, setState]
   )
 
-  const handleMessageChange = (value: string) => {
+  const handleMessageChange = (ev: ChangeEvent<HTMLTextAreaElement>) => {
     resetState()
-    setMessage(value)
+    setMessage(ev.currentTarget.value)
   }
 
-  const handleIpfsChange = (value: string) => {
+  const handleIpfsChange = (ev: ChangeEvent<HTMLInputElement>) => {
     resetState()
-    setIPFSHash(value)
+    setIPFSHash(ev.currentTarget.value)
   }
 
   return (
     <div className={styles.container}>
       <main className={styles.main}>
+        <h1 className={styles.title}>
+          Create new Message
+        </h1>
 
-        <H3>tell us something</H3>
-        <TextArea onChange={handleMessageChange} />
+        <MetaMaskCard />
 
-        <H3>tags</H3>
-        <div style={{ display: 'flex' }}>
-          <TagInput /><TagInput /><TagInput /><TagInput />
-        </div>
+        <H2>Create Message</H2>
+        <p>Provide either a message or an ipfs link of an existing message.</p>
 
-        <H3>pay</H3>
-        <ButtonInput />
-
-        <H3>submit</H3>
-        <ActionButton text='whistleblow' />
+        message:
+        <textarea disabled={isUsingIPFSInput || state.isSubmitted || state.isSubmitting} value={inputMessage} onChange={handleMessageChange}></textarea>
+        ipfs hash:
+        <input disabled={state.isSubmitted || state.isSubmitting} type='text' value={inputIpfsHash} onChange={handleIpfsChange} />
+        <H3>Submit</H3>
+        <button disabled={!inputMessage.length || state.isSubmitted || state.isSubmitting} onClick={submit}>Submit {isUsingIPFSInput ? 'IPFS Link' : 'Message'}</button>
 
         <H3>Simulate Relayer</H3>
-        <ActionButton text='publish' />
+        <button disabled={!state.isSubmitted || state.isPublishing} onClick={submitToBlockchainAsRelayer}>Publish on blockchain</button>
         {state.isPublished && 'Published!'}
 
       </main>
-      <aside>
-        <img src="/images/flysuck.jpg" />
-      </aside>
     </div>
   )
 }

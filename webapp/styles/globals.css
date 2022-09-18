@@ -43,6 +43,6 @@ a {
   }
 }
 
-textarea:focus, input:focus{
+button:focus, textarea:focus, input:focus {
     outline: none;
 }

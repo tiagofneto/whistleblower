@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
-import {
-  Article, Box, BoxAnnotation, H2, H3, ButtonInput, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareBorderedButton, SquareButton, ActionButton, TagInput, TextArea,
-} from 'src/components'
+import { ActionButton, Box, BoxAnnotation, ButtonInput, H2, H3, MetaMaskCard, ReadBlockchainExample, RoundButton, SquareBorderedButton, SquareButton, TagInput, TextArea } from 'src/components'
+import Article from 'src/components/molecules/Article'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {

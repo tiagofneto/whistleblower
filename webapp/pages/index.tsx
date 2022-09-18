@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import ReadBlockchainExample from 'src/components/atoms/ReadBlockchainExample'
-import MetaMaskCard from 'src/components/organizms/MetaMaskCard'
+import MetaMaskCard from 'src/components/organisms/MetaMaskCard'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
