@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "openzeppelin-contracts/access/Ownable.sol";
+import "./MerkleTreeWithHistory.sol";
 
-contract Pool is Ownable {
+contract Pool {
   uint256 immutable depositAmount;
 
   mapping(bytes32 => bool) private hashes;
@@ -39,7 +39,7 @@ contract Pool is Ownable {
   }
 
   function setLensInteractor(address _lensInteractor) external {
-    require(msg.sender == owner() || lensInteractor == address(0));
+    require(lensInteractor == address(0));
     lensInteractor = _lensInteractor;
   }
 }
