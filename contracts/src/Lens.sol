@@ -40,9 +40,9 @@ contract Lens {
   }
 
 
-  function verifyAndPost(string memory word) external {
+  function verifyAndPost(bytes calldata proof, string memory word, bytes32 root, bytes32 nullifierHash) external {
     //1. Verify hash
-    pool.verifyAndRemoveWord(word);
+    pool.verify(proof, word, root, nullifierHash);
 
     //2. Post on lens
     ILensHub.PostData memory data = ILensHub.PostData({
