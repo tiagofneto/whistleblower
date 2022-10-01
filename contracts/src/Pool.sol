@@ -34,7 +34,6 @@ contract Pool is MerkleTreeWithHistory {
     require(!nullifierHashes[nullifierHash], "Already spent");
     require(isKnownRoot(root), "Invalid merkle root");
 
-    //TODO verify proof
     verifier.verifyProof(proof, [uint256(root), uint256(nullifierHash)]);
 
     nullifierHashes[nullifierHash] = true;

@@ -15,7 +15,7 @@ contract DeployScript is Script {
 
       Pool pool = new Pool(10**16, verifier);
     
-      Lens lens = new Lens(address(pool), "testhandle");
+      Lens lens = new Lens(address(pool), "whistleblower");
       lens;
 
       vm.stopBroadcast();
