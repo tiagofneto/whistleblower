@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tiagofneto/whistleblower#readme",
   "dependencies": {
-    "circomlib": "^2.0.5"
+    "circom": "^0.0.35",
+    "circomlib": "git+https://github.com/tornadocash/circomlib.git#c372f14d324d57339c88451834bf2824e73bbdbc"
   }
 }
