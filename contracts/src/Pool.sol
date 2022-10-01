@@ -2,13 +2,10 @@
 pragma solidity ^0.8.13;
 
 import "./MerkleTreeWithHistory.sol";
-
-interface IVerifier {
-  function verifyProof(bytes memory _proof, uint256[2] memory _input) external returns (bool);
-}
+import "./Verifier.sol";
 
 contract Pool is MerkleTreeWithHistory {
-  IVerifier public immutable verifier;
+  Verifier public immutable verifier;
   uint256 immutable depositAmount;
 
   mapping(bytes32 => bool) public commitments;
@@ -16,7 +13,7 @@ contract Pool is MerkleTreeWithHistory {
 
   address lensInteractor;
 
-  constructor(uint256 _depostiAmount, IVerifier _verifier) MerkleTreeWithHistory(20, IHasher(0x83584f83f26aF4eDDA9CBe8C730bc87C364b28fe)) {
+  constructor(uint256 _depostiAmount, Verifier _verifier) MerkleTreeWithHistory(20, IHasher(0x83584f83f26aF4eDDA9CBe8C730bc87C364b28fe)) {
     depositAmount = _depostiAmount;
     verifier = _verifier;
   }

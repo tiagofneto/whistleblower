@@ -90,21 +90,159 @@
     "post((uint256,string,address,bytes,address,bytes))": "963ff141",
     "tokenOfOwnerByIndex(address,uint256)": "2f745c59"
   },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"profileId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"contentURI\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"collectModule\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"collectModuleInitData\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"referenceModule\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"referenceModuleInitData\",\"type\":\"bytes\"}],\"internalType\":\"struct ILensHub.PostData\",\"name\":\"vars\",\"type\":\"tuple\"}],\"name\":\"post\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Lens Protocol\",\"kind\":\"dev\",\"methods\":{\"post((uint256,string,address,bytes,address,bytes))\":{\"params\":{\"vars\":\"A PostData struct containing the needed parameters.\"},\"returns\":{\"_0\":\"uint256 An integer representing the post's publication ID.\"}}},\"title\":\"ILensHub\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"post((uint256,string,address,bytes,address,bytes))\":{\"notice\":\"Publishes a post to a given profile, must be called by the profile owner.\"}},\"notice\":\"This is the interface for the LensHub contract, the main entry point for the Lens Protocol. You'll find all the events and external functions, as well as the reasoning behind them here.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ILensHub.sol\":\"ILensHub\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/interfaces/ILensHub.sol\":{\"keccak256\":\"0x94a450e61ae03e80b715c7292b532f4b4a43fb2b0a0a809e847fb03813bf038b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://23dc9ee4d4521ba88e2c273355b7a2dc35480c02e1c50ae1cb03f8726c3cc5b8\",\"dweb:/ipfs/QmetJdndqW4foccoGm9q4nN58UAs77VwmedLohkkfsPvyq\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct ILensHub.PostData",
+              "name": "vars",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "profileId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "contentURI",
+                  "type": "string"
+                },
+                {
+                  "internalType": "address",
+                  "name": "collectModule",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "collectModuleInitData",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "address",
+                  "name": "referenceModule",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "referenceModuleInitData",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "post",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "tokenOfOwnerByIndex",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "post((uint256,string,address,bytes,address,bytes))": {
+            "params": {
+              "vars": "A PostData struct containing the needed parameters."
+            },
+            "returns": {
+              "_0": "uint256 An integer representing the post's publication ID."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "post((uint256,string,address,bytes,address,bytes))": {
+            "notice": "Publishes a post to a given profile, must be called by the profile owner."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/ILensHub.sol": "ILensHub"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/ILensHub.sol": {
+        "keccak256": "0x94a450e61ae03e80b715c7292b532f4b4a43fb2b0a0a809e847fb03813bf038b",
+        "urls": [
+          "bzz-raw://23dc9ee4d4521ba88e2c273355b7a2dc35480c02e1c50ae1cb03f8726c3cc5b8",
+          "dweb:/ipfs/QmetJdndqW4foccoGm9q4nN58UAs77VwmedLohkkfsPvyq"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
   "ast": {
     "absolutePath": "src/interfaces/ILensHub.sol",
-    "id": 453,
+    "id": 24885,
     "exportedSymbols": {
       "ILensHub": [
-        452
+        24884
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:1512:4",
+    "src": "32:1512:12",
     "nodes": [
       {
-        "id": 419,
+        "id": 24851,
         "nodeType": "PragmaDirective",
-        "src": "32:24:4",
+        "src": "32:24:12",
         "literals": [
           "solidity",
           "^",
@@ -113,25 +251,25 @@
         ]
       },
       {
-        "id": 452,
+        "id": 24884,
         "nodeType": "ContractDefinition",
-        "src": "313:1230:4",
+        "src": "313:1230:12",
         "nodes": [
           {
-            "id": 433,
+            "id": 24865,
             "nodeType": "StructDefinition",
-            "src": "941:191:4",
+            "src": "941:191:12",
             "canonicalName": "ILensHub.PostData",
             "members": [
               {
                 "constant": false,
-                "id": 422,
+                "id": 24854,
                 "mutability": "mutable",
                 "name": "profileId",
-                "nameLocation": "971:9:4",
+                "nameLocation": "971:9:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "963:17:4",
+                "scope": 24865,
+                "src": "963:17:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -139,10 +277,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 421,
+                  "id": 24853,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "963:7:4",
+                  "src": "963:7:12",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -152,13 +290,13 @@
               },
               {
                 "constant": false,
-                "id": 424,
+                "id": 24856,
                 "mutability": "mutable",
                 "name": "contentURI",
-                "nameLocation": "993:10:4",
+                "nameLocation": "993:10:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "986:17:4",
+                "scope": 24865,
+                "src": "986:17:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -166,10 +304,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 423,
+                  "id": 24855,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "986:6:4",
+                  "src": "986:6:12",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -179,13 +317,13 @@
               },
               {
                 "constant": false,
-                "id": 426,
+                "id": 24858,
                 "mutability": "mutable",
                 "name": "collectModule",
-                "nameLocation": "1017:13:4",
+                "nameLocation": "1017:13:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "1009:21:4",
+                "scope": 24865,
+                "src": "1009:21:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -193,10 +331,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 425,
+                  "id": 24857,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1009:7:4",
+                  "src": "1009:7:12",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -207,13 +345,13 @@
               },
               {
                 "constant": false,
-                "id": 428,
+                "id": 24860,
                 "mutability": "mutable",
                 "name": "collectModuleInitData",
-                "nameLocation": "1042:21:4",
+                "nameLocation": "1042:21:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "1036:27:4",
+                "scope": 24865,
+                "src": "1036:27:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -221,10 +359,10 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 427,
+                  "id": 24859,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1036:5:4",
+                  "src": "1036:5:12",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_storage_ptr",
                     "typeString": "bytes"
@@ -234,13 +372,13 @@
               },
               {
                 "constant": false,
-                "id": 430,
+                "id": 24862,
                 "mutability": "mutable",
                 "name": "referenceModule",
-                "nameLocation": "1077:15:4",
+                "nameLocation": "1077:15:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "1069:23:4",
+                "scope": 24865,
+                "src": "1069:23:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -248,10 +386,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 429,
+                  "id": 24861,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1069:7:4",
+                  "src": "1069:7:12",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -262,13 +400,13 @@
               },
               {
                 "constant": false,
-                "id": 432,
+                "id": 24864,
                 "mutability": "mutable",
                 "name": "referenceModuleInitData",
-                "nameLocation": "1104:23:4",
+                "nameLocation": "1104:23:12",
                 "nodeType": "VariableDeclaration",
-                "scope": 433,
-                "src": "1098:29:4",
+                "scope": 24865,
+                "src": "1098:29:12",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -276,10 +414,10 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 431,
+                  "id": 24863,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1098:5:4",
+                  "src": "1098:5:12",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_storage_ptr",
                     "typeString": "bytes"
@@ -289,18 +427,18 @@
               }
             ],
             "name": "PostData",
-            "nameLocation": "948:8:4",
-            "scope": 452,
+            "nameLocation": "948:8:12",
+            "scope": 24884,
             "visibility": "public"
           },
           {
-            "id": 442,
+            "id": 24874,
             "nodeType": "FunctionDefinition",
-            "src": "1386:65:4",
+            "src": "1386:65:12",
             "documentation": {
-              "id": 434,
+              "id": 24866,
               "nodeType": "StructuredDocumentation",
-              "src": "1136:247:4",
+              "src": "1136:247:12",
               "text": " @notice Publishes a post to a given profile, must be called by the profile owner.\n @param vars A PostData struct containing the needed parameters.\n @return uint256 An integer representing the post's publication ID."
             },
             "functionSelector": "963ff141",
@@ -308,61 +446,61 @@
             "kind": "function",
             "modifiers": [],
             "name": "post",
-            "nameLocation": "1395:4:4",
+            "nameLocation": "1395:4:12",
             "parameters": {
-              "id": 438,
+              "id": 24870,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 437,
+                  "id": 24869,
                   "mutability": "mutable",
                   "name": "vars",
-                  "nameLocation": "1418:4:4",
+                  "nameLocation": "1418:4:12",
                   "nodeType": "VariableDeclaration",
-                  "scope": 442,
-                  "src": "1400:22:4",
+                  "scope": 24874,
+                  "src": "1400:22:12",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_PostData_$433_calldata_ptr",
+                    "typeIdentifier": "t_struct$_PostData_$24865_calldata_ptr",
                     "typeString": "struct ILensHub.PostData"
                   },
                   "typeName": {
-                    "id": 436,
+                    "id": 24868,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 435,
+                      "id": 24867,
                       "name": "PostData",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 433,
-                      "src": "1400:8:4"
+                      "referencedDeclaration": 24865,
+                      "src": "1400:8:12"
                     },
-                    "referencedDeclaration": 433,
-                    "src": "1400:8:4",
+                    "referencedDeclaration": 24865,
+                    "src": "1400:8:12",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PostData_$433_storage_ptr",
+                      "typeIdentifier": "t_struct$_PostData_$24865_storage_ptr",
                       "typeString": "struct ILensHub.PostData"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1399:24:4"
+              "src": "1399:24:12"
             },
             "returnParameters": {
-              "id": 441,
+              "id": 24873,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 440,
+                  "id": 24872,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 442,
-                  "src": "1442:7:4",
+                  "scope": 24874,
+                  "src": "1442:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -370,10 +508,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 439,
+                    "id": 24871,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1442:7:4",
+                    "src": "1442:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -382,36 +520,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1441:9:4"
+              "src": "1441:9:12"
             },
-            "scope": 452,
+            "scope": 24884,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 451,
+            "id": 24883,
             "nodeType": "FunctionDefinition",
-            "src": "1455:86:4",
+            "src": "1455:86:12",
             "functionSelector": "2f745c59",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "tokenOfOwnerByIndex",
-            "nameLocation": "1464:19:4",
+            "nameLocation": "1464:19:12",
             "parameters": {
-              "id": 447,
+              "id": 24879,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 444,
+                  "id": 24876,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "1492:5:4",
+                  "nameLocation": "1492:5:12",
                   "nodeType": "VariableDeclaration",
-                  "scope": 451,
-                  "src": "1484:13:4",
+                  "scope": 24883,
+                  "src": "1484:13:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -419,10 +557,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 443,
+                    "id": 24875,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1484:7:4",
+                    "src": "1484:7:12",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -433,13 +571,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 446,
+                  "id": 24878,
                   "mutability": "mutable",
                   "name": "index",
-                  "nameLocation": "1507:5:4",
+                  "nameLocation": "1507:5:12",
                   "nodeType": "VariableDeclaration",
-                  "scope": 451,
-                  "src": "1499:13:4",
+                  "scope": 24883,
+                  "src": "1499:13:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -447,10 +585,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 445,
+                    "id": 24877,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1499:7:4",
+                    "src": "1499:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -459,21 +597,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1483:30:4"
+              "src": "1483:30:12"
             },
             "returnParameters": {
-              "id": 450,
+              "id": 24882,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 449,
+                  "id": 24881,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 451,
-                  "src": "1532:7:4",
+                  "scope": 24883,
+                  "src": "1532:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -481,10 +619,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 448,
+                    "id": 24880,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1532:7:4",
+                    "src": "1532:7:12",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -493,9 +631,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1531:9:4"
+              "src": "1531:9:12"
             },
-            "scope": 452,
+            "scope": 24884,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -507,22 +645,22 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 420,
+          "id": 24852,
           "nodeType": "StructuredDocumentation",
-          "src": "58:254:4",
+          "src": "58:254:12",
           "text": " @title ILensHub\n @author Lens Protocol\n @notice This is the interface for the LensHub contract, the main entry point for the Lens Protocol.\n You'll find all the events and external functions, as well as the reasoning behind them here."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          452
+          24884
         ],
         "name": "ILensHub",
-        "nameLocation": "323:8:4",
-        "scope": 453,
+        "nameLocation": "323:8:12",
+        "scope": 24885,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 4
+  "id": 12
 }

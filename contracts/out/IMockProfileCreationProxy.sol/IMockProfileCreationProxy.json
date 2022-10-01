@@ -59,21 +59,115 @@
   "methodIdentifiers": {
     "proxyCreateProfile((address,string,string,address,bytes,string))": "07e5f948"
   },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"handle\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"imageURI\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"followModule\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"followModuleInitData\",\"type\":\"bytes\"},{\"internalType\":\"string\",\"name\":\"followNFTURI\",\"type\":\"string\"}],\"internalType\":\"struct IMockProfileCreationProxy.CreateProfileData\",\"name\":\"vars\",\"type\":\"tuple\"}],\"name\":\"proxyCreateProfile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IMockProfileCreationProxy.sol\":\"IMockProfileCreationProxy\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/interfaces/IMockProfileCreationProxy.sol\":{\"keccak256\":\"0xfbb21e37475ea2d54e287a8394b01b48314f2254f5d231b7cf066caaae5e8db8\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3f1e803650ad7ef36cd66298631d2bd3d0e0e617743a4725974d42b56ee5a062\",\"dweb:/ipfs/QmareEw9EdG7GAeJahSLnHJsbeduJpkuez4uEeFpH9AsE2\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct IMockProfileCreationProxy.CreateProfileData",
+              "name": "vars",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "to",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "handle",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "imageURI",
+                  "type": "string"
+                },
+                {
+                  "internalType": "address",
+                  "name": "followModule",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "followModuleInitData",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "string",
+                  "name": "followNFTURI",
+                  "type": "string"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "proxyCreateProfile"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/IMockProfileCreationProxy.sol": "IMockProfileCreationProxy"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IMockProfileCreationProxy.sol": {
+        "keccak256": "0xfbb21e37475ea2d54e287a8394b01b48314f2254f5d231b7cf066caaae5e8db8",
+        "urls": [
+          "bzz-raw://3f1e803650ad7ef36cd66298631d2bd3d0e0e617743a4725974d42b56ee5a062",
+          "dweb:/ipfs/QmareEw9EdG7GAeJahSLnHJsbeduJpkuez4uEeFpH9AsE2"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
   "ast": {
     "absolutePath": "src/interfaces/IMockProfileCreationProxy.sol",
-    "id": 445,
+    "id": 24907,
     "exportedSymbols": {
       "IMockProfileCreationProxy": [
-        444
+        24906
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "39:829:5",
+    "src": "39:829:13",
     "nodes": [
       {
-        "id": 424,
+        "id": 24886,
         "nodeType": "PragmaDirective",
-        "src": "39:24:5",
+        "src": "39:24:13",
         "literals": [
           "solidity",
           "^",
@@ -82,25 +176,25 @@
         ]
       },
       {
-        "id": 444,
+        "id": 24906,
         "nodeType": "ContractDefinition",
-        "src": "65:802:5",
+        "src": "65:802:13",
         "nodes": [
           {
-            "id": 437,
+            "id": 24899,
             "nodeType": "StructDefinition",
-            "src": "624:169:5",
+            "src": "624:169:13",
             "canonicalName": "IMockProfileCreationProxy.CreateProfileData",
             "members": [
               {
                 "constant": false,
-                "id": 426,
+                "id": 24888,
                 "mutability": "mutable",
                 "name": "to",
-                "nameLocation": "663:2:5",
+                "nameLocation": "663:2:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "655:10:5",
+                "scope": 24899,
+                "src": "655:10:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -108,10 +202,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 425,
+                  "id": 24887,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "655:7:5",
+                  "src": "655:7:13",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -122,13 +216,13 @@
               },
               {
                 "constant": false,
-                "id": 428,
+                "id": 24890,
                 "mutability": "mutable",
                 "name": "handle",
-                "nameLocation": "678:6:5",
+                "nameLocation": "678:6:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "671:13:5",
+                "scope": 24899,
+                "src": "671:13:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -136,10 +230,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 427,
+                  "id": 24889,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "671:6:5",
+                  "src": "671:6:13",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -149,13 +243,13 @@
               },
               {
                 "constant": false,
-                "id": 430,
+                "id": 24892,
                 "mutability": "mutable",
                 "name": "imageURI",
-                "nameLocation": "697:8:5",
+                "nameLocation": "697:8:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "690:15:5",
+                "scope": 24899,
+                "src": "690:15:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -163,10 +257,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 429,
+                  "id": 24891,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "690:6:5",
+                  "src": "690:6:13",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -176,13 +270,13 @@
               },
               {
                 "constant": false,
-                "id": 432,
+                "id": 24894,
                 "mutability": "mutable",
                 "name": "followModule",
-                "nameLocation": "719:12:5",
+                "nameLocation": "719:12:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "711:20:5",
+                "scope": 24899,
+                "src": "711:20:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -190,10 +284,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 431,
+                  "id": 24893,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "711:7:5",
+                  "src": "711:7:13",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -204,13 +298,13 @@
               },
               {
                 "constant": false,
-                "id": 434,
+                "id": 24896,
                 "mutability": "mutable",
                 "name": "followModuleInitData",
-                "nameLocation": "743:20:5",
+                "nameLocation": "743:20:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "737:26:5",
+                "scope": 24899,
+                "src": "737:26:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -218,10 +312,10 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 433,
+                  "id": 24895,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
-                  "src": "737:5:5",
+                  "src": "737:5:13",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_storage_ptr",
                     "typeString": "bytes"
@@ -231,13 +325,13 @@
               },
               {
                 "constant": false,
-                "id": 436,
+                "id": 24898,
                 "mutability": "mutable",
                 "name": "followNFTURI",
-                "nameLocation": "776:12:5",
+                "nameLocation": "776:12:13",
                 "nodeType": "VariableDeclaration",
-                "scope": 437,
-                "src": "769:19:5",
+                "scope": 24899,
+                "src": "769:19:13",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -245,10 +339,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 435,
+                  "id": 24897,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "769:6:5",
+                  "src": "769:6:13",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -258,68 +352,68 @@
               }
             ],
             "name": "CreateProfileData",
-            "nameLocation": "631:17:5",
-            "scope": 444,
+            "nameLocation": "631:17:13",
+            "scope": 24906,
             "visibility": "public"
           },
           {
-            "id": 443,
+            "id": 24905,
             "nodeType": "FunctionDefinition",
-            "src": "797:68:5",
+            "src": "797:68:13",
             "functionSelector": "07e5f948",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "proxyCreateProfile",
-            "nameLocation": "806:18:5",
+            "nameLocation": "806:18:13",
             "parameters": {
-              "id": 441,
+              "id": 24903,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 440,
+                  "id": 24902,
                   "mutability": "mutable",
                   "name": "vars",
-                  "nameLocation": "850:4:5",
+                  "nameLocation": "850:4:13",
                   "nodeType": "VariableDeclaration",
-                  "scope": 443,
-                  "src": "825:29:5",
+                  "scope": 24905,
+                  "src": "825:29:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CreateProfileData_$437_memory_ptr",
+                    "typeIdentifier": "t_struct$_CreateProfileData_$24899_memory_ptr",
                     "typeString": "struct IMockProfileCreationProxy.CreateProfileData"
                   },
                   "typeName": {
-                    "id": 439,
+                    "id": 24901,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 438,
+                      "id": 24900,
                       "name": "CreateProfileData",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 437,
-                      "src": "825:17:5"
+                      "referencedDeclaration": 24899,
+                      "src": "825:17:13"
                     },
-                    "referencedDeclaration": 437,
-                    "src": "825:17:5",
+                    "referencedDeclaration": 24899,
+                    "src": "825:17:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CreateProfileData_$437_storage_ptr",
+                      "typeIdentifier": "t_struct$_CreateProfileData_$24899_storage_ptr",
                       "typeString": "struct IMockProfileCreationProxy.CreateProfileData"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "824:31:5"
+              "src": "824:31:13"
             },
             "returnParameters": {
-              "id": 442,
+              "id": 24904,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "864:0:5"
+              "src": "864:0:13"
             },
-            "scope": 444,
+            "scope": 24906,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -332,15 +426,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          444
+          24906
         ],
         "name": "IMockProfileCreationProxy",
-        "nameLocation": "75:25:5",
-        "scope": 445,
+        "nameLocation": "75:25:13",
+        "scope": 24907,
         "usedErrors": []
       }
     ],
     "license": "UNLICENSED"
   },
-  "id": 5
+  "id": 13
 }
